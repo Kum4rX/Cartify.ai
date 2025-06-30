@@ -7,7 +7,7 @@
     "resolveJsonModule": true,
     "outDir": "dist",
     "strict": true
-  }
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
