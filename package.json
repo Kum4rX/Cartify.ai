@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start:backend": "node --loader ts-node/esm src/server/serpapi-proxy.ts",
+    "build:backend": "tsc --project tsconfig.backend.json",
+    "start:prod": "node dist/server/serpapi-proxy.js"
   },
   "dependencies": {
     "@elevenlabs/elevenlabs-js": "^2.3.0",
