@@ -49,12 +49,20 @@ export const Header: React.FC = () => {
           <div className="flex items-center justify-between h-14 sm:h-16">
             {/* Logo and Location */}
             <div className="flex items-center space-x-2 sm:space-x-6">
-              <div className="flex items-center space-x-2 sm:space-x-3">
+              <div className="flex items-center space-x-2 sm:space-x-3 relative">
                 <img 
                   src="https://images.icon-icons.com/2699/PNG/512/walmart_logo_icon_170230.png" 
                   alt="Walmart Logo" 
                   className="w-6 h-6 sm:w-8 sm:w-8 md:w-10 md:h-10 object-contain"
                 />
+                {/* White Circle Logo Overlay */}
+                <div className="absolute -bottom-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">
+                  <img 
+                    src="/white_circle_360x360.png" 
+                    alt="Cartify AI" 
+                    className="w-full h-full object-contain opacity-90 hover:opacity-100 transition-opacity"
+                  />
+                </div>
               </div>
               
               {/* Location - Hidden on mobile */}
