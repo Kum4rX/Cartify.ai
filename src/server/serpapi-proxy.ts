@@ -1,18 +1,8 @@
-// If you encounter dependency conflicts when installing type definitions, try using the --legacy-peer-deps or --force flag:
-//   npm install --save-dev @types/express @types/cors --legacy-peer-deps
-// or
-//   npm install --save-dev @types/express @types/cors --force
-
 import express from 'express';
 import axios from 'axios';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import type { Request, Response } from 'express';
-
-// If you see red underlines for 'express' or 'cors', it's likely because TypeScript can't find their type definitions.
-// To fix this, install the type definitions with:
-//   npm install --save-dev @types/express @types/cors
-// This will provide TypeScript with the necessary type information and remove the red underlines.
 
 // Load environment variables from .env
 dotenv.config();
@@ -45,4 +35,7 @@ app.get('/api/serpapi', (req: Request, res: Response): void => {
 
 app.listen(PORT, () => {
   console.log(`SerpAPI proxy running on http://localhost:${PORT}`);
-}); 
+});
+
+// ESM export instead of CommonJS
+export default app;
